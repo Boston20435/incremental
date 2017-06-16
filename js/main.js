@@ -6,14 +6,20 @@ var income = 0;
 document.getElementById("moneyTotal").innerHTML = money;
 document.getElementById("income").innerHTML = "Income Per Second: $" + income;
 
+// Action function that will give you money every time you click action
+function action(x) {
+	return money+= x;
+};
 
 // Function that will add 1 to money total per second
-window.setInterval(
-function () {
-document.getElementById("moneyTotal").innerHTML = money = (money + 1);
+var test = window.setInterval(
+	function () {
+		document.getElementById("moneyTotal").innerHTML = income = (money + 1);
 }, 1000);
 
-// This next feature makes it so the button upgrade works, adds money + increment, updates money in HTML
-function upgrade() {
-  document.getElementById("moneyTotal").innerHTML = money = (money + 1);
-};
+console.log(test);
+
+// window.setInterval(
+// 	function () {
+// 		return income+= 100;
+// }, 1000);
